@@ -1,27 +1,29 @@
 <html>
-  <head><title></title>
-  <style>
-  #wrong { background: red;}
-  #right { background: green; }
-  </style>
-  </head>
+<style> 
+  #wronger { background: red;}
+  #wrong   { background: pink;}
+  #correct { background: green;}
+  #wrong   { background: blue;}
+  #wronger { background: navy;}
+</style>
+<head>Guess a number from 1 to 100...</head>
+  
   <% if correct %>
-  <body id="right">
-  <% else %>
-  <body id="wrong">
-  <% end %>
-  <div style="text-align:left">
-    <h1>
-    <% if correct %>
-      The SECRET NUMBER is <%= number %>
-      <img src = "http://www.huffingtonpost.com/2013/10/09/a-cappella-we-cant-stop-fallon-roots-miley_n_4069380.html?utm_hp_ref=entertainment&ir=Entertainment#slide=2966535">
+    <body id= "right">
+    <% else %>
+    <body id = "wrong">
       <% end %>
-      Your guess is <%= guess %>
-      <form>
+
+    <h1> <%= if correct %> 
+      <% message %> 
+      The SECRET NUMBER is <%= number %>
+        <img src="http://www.picgifs.com/graphics/d/dancing-baby/graphics-dancing-baby-383523.gif">
+        <% end %>
+
+
+    <form>
       <input type='text' name='guess' />
-      <input type='submit' value='Guess!' />
-  </form>
-    </h1>
-    </div>
-  </body>
-</html>
+      <input type='submit' name='Guess!' /> </form>
+    </html>
+
+
