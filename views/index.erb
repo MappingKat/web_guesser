@@ -1,29 +1,15 @@
 <html>
-<style> 
-  #wronger { background: red;}
-  #wrong   { background: pink;}
-  #correct { background: green;}
-  #wrong   { background: blue;}
-  #wronger { background: navy;}
-</style>
-<head>Guess a number from 1 to 100...</head>
-  
-  <% if correct %>
-    <body id= "right">
-    <% else %>
-    <body id = "wrong">
-      <% end %>
+  <head>
+  </head>
 
-    <h1> <%= if correct %> 
-      <% message %> 
-      The SECRET NUMBER is <%= number %>
-        <img src="http://www.picgifs.com/graphics/d/dancing-baby/graphics-dancing-baby-383523.gif">
-        <% end %>
-
+  <body>
+    <body style="background-color:<%= color %>;">
+    <h1><%= message %></h1>
 
     <form>
       <input type='text' name='guess' />
-      <input type='submit' name='Guess!' /> </form>
-    </html>
-
-
+      <input type='submit' /> 
+    </form>
+        <img src="http://www.picgifs.com/graphics/d/dancing-baby/graphics-dancing-baby-383523.gif">
+  </body>
+</html>
